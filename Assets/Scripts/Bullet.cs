@@ -17,9 +17,9 @@ public class Bullet : MonoBehaviour
 		shotVelocity.z = 0;
 		startSpot = transform.position;
 		rb2d.velocity = shotVelocity;
-		Vector3 lookat = transform.position + shotVelocity;
-		lookat.z = 0;
-		transform.up = lookat - transform.position;
+		//Vector3 lookat = transform.position + shotVelocity;
+		//lookat.z = 0;
+		//transform.up = lookat - transform.position;
 	}//Shoot
 
 	void Update()
