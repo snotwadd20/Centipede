@@ -14,6 +14,11 @@ public class Mushroom : MonoBehaviour
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		spriteRenderer.sprite = damageStates[0];
 	}//Awake
+
+	void Damage(int amount)
+	{
+		currentDamageState++;
+	}//Damage
 	
 	void Update () 
 	{

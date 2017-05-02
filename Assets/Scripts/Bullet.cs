@@ -33,7 +33,6 @@ public class Bullet : MonoBehaviour
 		if (coll.gameObject.GetComponent<Ship>())
 			return;
 
-		print(coll.gameObject.name);
 		coll.gameObject.SendMessage("Damage", 1, SendMessageOptions.DontRequireReceiver);
 		Explode();
 	}//Collider2D
