@@ -15,12 +15,12 @@ public class Ship : MonoBehaviour
 	private float inputX = 0;
 	private float inputY = 0;
 
-	//private Rigidbody2D rb2d = null;
+	private Rigidbody2D rb2d = null;
 
 	// Use this for initialization
 	void Awake () 
 	{
-		//rb2d = GetComponent<Rigidbody2D>();
+		rb2d = GetComponent<Rigidbody2D>();
 
 	}//Awake
 
@@ -54,7 +54,8 @@ public class Ship : MonoBehaviour
 
 		if (shipBounds.bounds.Contains((Vector2)transform.position + moveVec))
 		{
-			transform.Translate(moveVec);
+			//transform.Translate(moveVec);
+			rb2d.MovePosition((Vector2)transform.position + moveVec);
 		}//if
 
 
